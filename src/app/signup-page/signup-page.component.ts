@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./signup-page.component.css']
 })
 export class SignupPageComponent implements OnInit {
-
+SignIn : any = {} ;
   constructor() { }
 
   ngOnInit() {
   }
-
+  onSignIn({ controls, invalid }){
+    console.log('form data ---------------->', FormData, this.SignIn)
+    if(invalid)
+    {
+      return;
+    }
+  }
 }
